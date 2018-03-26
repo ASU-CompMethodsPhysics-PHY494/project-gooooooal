@@ -16,35 +16,16 @@ Your objectives are
 2. To write Python code to _find kick parameters that could lead to scoring a goal_ and to use your code to find such parameters.
 3. You will write a _short report_ to communicate, discuss and summarize your reasoning and your results.
 
-The work is carried out in teams of two or three students.
+The work is carried out in teams of two or three students. 
+
+For further details, see [project_2.pdf](problem/project_2.pdf).
 
 
 ## Given parameters
 
 Soccer rules follow FIFA's [Laws of the Game (PDF)](http://www.fifa.com/mm/document/footballdevelopment/refereeing/02/36/01/11/lawsofthegameweben%5fneutral.pdf).
 
+For further details, see [project_2.pdf](problem/project_2.pdf).
 
-### Field dimensions
-
-The field is rectangular. The parameters were chosen in the middle of the allowed range for international matches:
-
-- goal line (width of field): 70 m
-- touch line (length of field): 105 m
-
-
-### Goal 
-
-The goal's dimensions are 
-
-- height: 2.44 m (8 ft)
-- width: 7.32 m (8 yards)
-
-
-### Ball
-
-The ball is spherical (parameters were chosen to be in the middle of the allowed ranges):
-
-- circumference: 69 cm
-- mass: 430 g
 
 
