@@ -89,4 +89,21 @@ ENV/
 .ropeproject
 
 
+# custom
+# editor files
+*~
+
+# latex
+tex/*.aux
+tex/*.blg
+tex/*.out
+tex/*.toc
+tex/*.bbl
+tex/auto
+tex/_minted-*
+tex/project_2.pdf
+
+.DS_Store
+
+
 FIFA_lawsofthegameweben_neutral.pdf
