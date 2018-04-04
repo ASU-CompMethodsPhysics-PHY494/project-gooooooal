@@ -344,6 +344,28 @@ soccer players \citep{Goff:2009aa}:
 
 \paragraph{Geometry}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{figs/Football_pitch_metric_and_imperial_edited.pdf}
+  \caption{Geometry of a soccer pitch according to FIFA rules. The
+    length of the \emph{touchline} and \emph{goal line} are variable
+    (gray) but for this project, adopt the numbers shown in red. Other
+    numbers are for your information but are not needed for this
+    project (except the width of the goal, see text and Figures
+    \protect\ref{fig:freekickside} and \protect\ref{fig:cornerkick}).}
+  \label{fig:pitch}
+\end{figure}
+
+The dimensions and markings of a soccer pitch are defined in the FIFA
+rules, as shown in Figure \ref{fig:pitch}. The
+overall size may vary within certain ranges. For this problem, adopt a
+length of the touchline of \SI{105}{m} and of the goal line of
+\SI{68.52}{m}. The goal has a width of \SI{7.32}{m} and a height of
+\SI{2.44}{m}. 
+
+
+\paragraph{Free kick}
+
 The geometry of the situation for the \textbf{free kick} with a wall
 of defending players is shown in Fig.~\ref{fig:freekick}. This is just
 one of many possible positions to take the shot. We assume that the
@@ -376,9 +398,11 @@ into the target area, as specified in Fig.~\ref{fig:freekickside}.
     is in the upper left corner of the goal (as seen by the kicker);
     note that the target area is offset by the radius of the ball $r$
     from the top and left edges. The goal keeper is only shown for
-    comparison.}
+    comparison and does not have to be included in any simulations.}
   \label{fig:freekick}
 \end{figure}
+
+\paragraph{Corner kick}
 
 The geometry for the \textbf{corner kick} is shown in
 Fig.~\ref{fig:cornerkick}. We assume the kicker scores when she or he
@@ -402,7 +426,8 @@ that it may curve back towards the goal.
     angle $\theta$ (launch angle measured from the ground up, not
     shown). Note that the target area is offset by the radius of the
     ball $r$ from the top and left edges. The goal keeper is only
-    shown for comparison.}
+    shown for comparison and does not have to be included in any
+    simulations.}
   \label{fig:cornerkick}
 \end{figure}
 
@@ -429,18 +454,23 @@ Fig.~\ref{fig:freekick}. A trajectory should start at the position of
 the ball (\SI{18.3}{m} from the center of the goal). A trajectory
 should end when the ball
 \begin{enumerate}
-\item leaves the field across the goal line
-\item flies over the goal
-\item crosses the goal line inside the goal (includes hitting the
-  target area)
-\item hits the wall
+\item leaves the field across the touchline or the goal line (this
+  includes flying over the goal or crossing the goal line inside the
+  goal but the latter will only count as a scored goal if it hits the
+  target area --- see Section \ref{sec:scoring})
+\item hits the ground (we make the highly simplifying assumption that
+  in this situation no scoring will ever occur)
+\item hits the wall.
 \end{enumerate}
 
 
 \paragraph{Initial conditions}
 
-Sensible ranges of parameters are \citep{Cook:2006aa}\footnote{For a
-  related treatment of the problem see \citet{Bray:2003aa}.}
+Sensible ranges of parameters are shown below (based on work by
+\citet{Cook:2006aa})\footnote{For a related treatment of the problem
+  see \citet{Bray:2003aa}.}  \textbf{although you should feel free to
+  explore a wider range of parameters if necessary}---solutions are
+not guaranteed with the parameters below.
 \begin{itemize}
 \item initial velocity $\SI{24}{m.s^{-1}} \le v_{0} \le \SI{30}{m.s^{-1}}$
 \item initial spin
@@ -448,7 +478,9 @@ Sensible ranges of parameters are \citep{Cook:2006aa}\footnote{For a
   \SI{12}{\revolutions\per\second}$ and for the orientation of the
   spin you may focus on full sideways spin, i.e., the spin axis
   $\boldsymbol{\omega}$ is perpendicular to the ground and parallel to
-  the direction of gravity.
+  the direction of gravity. Nevertheless, you are free to explore
+  other directions of the spin axis, including spin in the opposite
+  direction.
 \item polar (launch) angle $\ang{10} \le \theta \le \ang{20}$
 \item azimuthal (direction) angle $\ang{-2} \le \phi \le \ang{5}$
 \end{itemize}
@@ -461,17 +493,20 @@ Fig.~\ref{fig:cornerkick}. A trajectory should start at the position
 of the ball on the corner of the field; assume that the ball sits on
 the corner. A trajectory should end when the ball
 \begin{enumerate}
-\item leaves the field across the goal line or touchline
-\item flies over the goal
-\item crosses the goal line inside the goal (includes hitting the
-  target area)
+\item leaves the field across the touchline or the goal line (this
+  includes flying over the goal or crossing the goal line inside the
+  goal but the latter will only count as a scored goal if it hits the
+  target area --- see Section \ref{sec:scoring})
+\item hits the ground (we make the highly simplifying assumption that
+  in this situation no scoring will ever occur).
 \end{enumerate}
 
 \paragraph{Initial conditions}
 
 Sensible starting ranges of parameters are shown below (based on
-\citet{Cook:2006aa}) although you should feel to explore a wider range
-of parameters if necessary.
+\citet{Cook:2006aa}) \textbf{although you should feel free to explore
+  a wider range of parameters if necessary}---solutions are not
+guaranteed with the parameters below.
 \begin{itemize}
 \item initial velocity $\SI{24}{m.s^{-1}} \le v_{0} \le
   \SI{30}{m.s^{-1}}$
@@ -480,7 +515,8 @@ of parameters if necessary.
   \SI{12}{\revolutions\per\second}$ and for the orientation of the
   spin you may focus on full sideways spin, i.e., the spin axis
   $\boldsymbol{\omega}$ is perpendicular to the ground and parallel to
-  the direction of gravity.
+  the direction of gravity. Nevertheless, you are free to explore
+  other directions of the spin axis.
 \item polar (launch) angle $\ang{20} \le \theta \le \ang{30}$
 \item azimuthal (direction) angle $\ang{-4} \le \phi \le \ang{4}$
 \end{itemize}
@@ -623,6 +659,9 @@ requirements in Section \ref{sec:problem} into account:
 Changes and updates to this document.
 \begin{description}
 \item[2018-03-26] initial version
+\item[2018-04-04] added soccer pitch dimensions, clarified ``ball
+  out'' conditions, and emphasized that the initial choices of
+  parameters can be expanded by students in order to find a solution
 \end{description}
   
 \bibliographystyle{physbiol-natbib}      % basic style, author-year citations
